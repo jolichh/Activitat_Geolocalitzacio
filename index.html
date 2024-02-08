@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	<title>Document</title>	  
+</head>
+<body>
+	<div id="container">
+		<h1>Geolocalització</h1>
+		<input placeholder="Buscar" type="text" value="" id="txtSearch" />
+		<button onclick="recargaPagina()">Inicialitza tot de nou</button>
+		<button onclick="calcMitjana()">Mitjana del valor afegit</button>
+		
+		<div id="map"></div>
+		<div id="container-tabla"></div>
+
+		<script>
+		let inputSearch = document.getElementById('txtSearch')
+		inputSearch.addEventListener('input', (e) => {
+			console.log(inputSearch.value);
+			searchListLive(inputSearch.value);
+		});		
+	
+		//var map = L.map('map').setView([51.505, -0.09], 13);
+		// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		// 	maxZoom: 19,
+		// 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		// }).addTo(map);
+		addMarker('[51.505, -0.09]');
+		</script>
+		
+	</div>
+</body>
+</html>

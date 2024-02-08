@@ -1,0 +1,31 @@
+#container {
+    margin: 20px;
+}
+table {
+    width: 90vw;
+    margin-top: 20px;
+}
+td {
+    width: fit-content;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    padding: 0;
+} 
+img {
+    max-width: 12rem;
+    max-height: 12rem;
+}
+select, button, input {
+    padding: 5px;
+    margin: 10px;
+}
+input {
+    margin-left: 0;
+}
+h1 {
+    margin-bottom: 0;
+}
+
+.img_:hover {
+    cursor: pointer;
+}
+#map { height: 230px; }
